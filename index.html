@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <title> Testsite Louis </title>
+
+    <meta charset="UTF-8">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin:0;
+            background-color: #bed4e4;
+            color: #222
+        }
+
+        nav {
+            background-color:  #515c85;
+            padding: 16px 40 px;
+        }
+
+        nav a {
+            color: rgb(241, 201, 201);
+            text-decoration:aliceblue;
+            margin-right: 25px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+            .profile-card {
+        max-width: 320px;
+        padding: 24px;
+        margin-top: 20px;
+        background-color: white;
+        border: 1px solid #dddddd;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+    .profile-card h3 {
+        margin-top: 0;
+        margin-bottom: 8px;
+        }
+
+    .profile-card p {
+            margin-bottom: 18px;
+            color: #555;
+        }
+
+    .hole19-button {
+        display: inline-block;
+        padding: 10px 18px;
+        background-color: #222;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    .hole19-button:hover {
+        background-color: #444;
+    }
+
+    .github-button {
+        display: inline-block;
+        padding: 10px 18px;
+        background-color: #222;
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+    }
+
+    .github-button:hover {
+        background-color: #444;
+    }
+
+    main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 30px;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#github">GitHub</a>
+    </nav>
+
+<main>
+
+    <h1 id="home">Louis Aslaksen's Webseite </h1>
+
+    <p>Dies ist eine Testseite, um zu verstehen wie html funktiniert</p>
+
+    <h2 id="about"> Über mich</h2>
+
+    <ul>
+        <li>Studium an der UZH, VWL im Major und Informatik im Minor</li>
+
+        <li>Ich spreche fliessend Deutsch, Englisch und Spanisch</li>
+
+        <li>Ich spiele gerne Tennis und Golf</li>
+
+
+    </ul>
+
+    <div class="profile-card">
+    <h3>Golf Profile</h3>
+    <p>Follow my rounds and golf activity on Hole19.</p>
+
+    <a class="hole19-button"
+       href="https://www.hole19golf.com/performance"
+       target="_blank">
+        Open Hole19
+    </a>
+    </div>
+
+    <div class="profile-card">
+    <h3>GitHub Profile</h3> 
+    <p>See all my projects on github.com</p>
+
+    <a class="github-button"
+        href="https://github.com/louis-aslaksen"
+        target="_blank">
+        Open GitHub
+    </a>   
+    </div>
+
+</main>
+</body>
+</html>
