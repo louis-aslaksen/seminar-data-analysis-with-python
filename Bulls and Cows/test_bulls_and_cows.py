@@ -27,7 +27,13 @@ bulls, cows = check_bulls_cows(["1","2","3","4"],["1","3","6","3"])
 assert bulls == 1
 assert cows == 1
 
-#Test 5, checks for 1 bull against all digits same.
+#Test 6
+bulls, cows = check_bulls_cows(["1","2","3","4"],["1","3","6","3"])
+
+assert bulls == 1
+assert cows == 1
+
+#Test 6, checks for 1 bull against all digits same.
 bulls, cows = check_bulls_cows(["1","2","3","4"],["1","1","1","1"])
 
 assert bulls == 1

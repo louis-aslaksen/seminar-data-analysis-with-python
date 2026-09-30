@@ -35,14 +35,17 @@ def check_bulls_cows(rndm, guess):
     bulls = 0
     cows = 0
 
+    #Checks for bulls, bulls get marked with x
     for i in range(len(rndm)):
         if rndm[i] == guess[i]:
             tmp_rndm[i] = "x"
             tmp_guess[i] = "x"
             bulls += 1
 
+    
+    #Checks for cows, digit used as a cow gets marked as x
     for i in range(len(rndm)):
-        if guess[i] in tmp_rndm:
+        if tmp_guess[i] != "x" and tmp_guess[i] in tmp_rndm:
             delete_cow_tmp = tmp_rndm.copy()
             tmp_rndm = delete_cow_candidate(delete_cow_tmp,tmp_guess[i])
             cows += 1
