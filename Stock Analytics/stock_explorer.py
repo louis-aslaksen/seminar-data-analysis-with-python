@@ -7,9 +7,18 @@ st.title("Stock Analytics Dashboard")
 
 # List of stocks for random selection
 stock_list = [
-    "AAPL", "MSFT", "NVDA", "GOOGL", "AMZN",
-    "META", "TSLA", "NOVN.SW", "NESN.SW",
-    "ABBN.SW", "UBSG.SW", "ROG.SW"
+    "AAPL",
+    "MSFT",
+    "NVDA",
+    "GOOGL",
+    "AMZN",
+    "META",
+    "TSLA",
+    "NOVN.SW",
+    "NESN.SW",
+    "ABBN.SW",
+    "UBSG.SW",
+    "ROG.SW",
 ]
 
 # Initialize ticker
@@ -27,7 +36,7 @@ ticker = st.text_input("Enter a stock ticker:", key="ticker")
 data_period = st.selectbox(
     "Select time period:",
     ["1mo", "3mo", "6mo", "1y", "2y", "5y", "10y", "max"],
-    index=3
+    index=3,
 )
 
 # Download stock data
@@ -43,9 +52,14 @@ else:
     st.subheader("Historical Stock Price")
     st.line_chart(data["Close"])
 
-    #Go to stock detail page
+    # Go to stock detail page
     if st.button("Go to stock detail page"):
         st.session_state.selected_ticker = ticker
         st.session_state.selected_period = data_period
         print("Selected ticker:", st.session_state.selected_ticker)
         st.switch_page("pages/1_Stock_Detail.py")
+
+    if st.button("Go to options detail page"):
+        st.session_state.selected_ticker = ticker
+        print("Selected ticker:", st.session_state.selected_ticker)
+        st.switch_page("pages/2_Options_Detail.py")
